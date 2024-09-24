@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+  --white:#fff;
+  --black: #111;
+  --blue: #3a80e9;
+  --grey: #888;
+  --darkgray:#1b1b1b;
+  --green: #61c96f;
+  --red:#f94141;
+}
+html{
+  scroll-behavior: smooth;
+}
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--black);
+  color:var(--white);
+  font-family: "Inter", sans-serif;
+  /* height:200vh; */
+}
+
+::selection {
+  background: var(--blue);
+  color:var(--white);
+}
+a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+/************scroll bar**************/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--blue);
+  border-radius:3rem
+}
+/**********Scroll bar end**********/
+
+.grey-wrapper{
+  display:block;
+  width:90%;
+  background:var(--darkgray);
+  margin:1.5rem auto;
+  border-radius:0.8rem;
+  padding:0.1rem 0.8rem;
+}
+
+.error{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  color:#f94141;
+  font-weight:500;
+  margin-top: 10rem;
+}
+.loader{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-color: var(--black);
+    color:var(--blue);
+    position: fixed;
+    z-index: 1000;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+.coins-days-flex{
+  display:flex;
+  justify-content: flex-start;
+  align-items:center;
+  margin:1.5rem;
+  gap:2rem;
+}
+
+@media only screen and (max-width:800px){
+  .coins-days-flex{
+    flex-wrap: wrap;
+    align-items:center;
+    margin:0.7rem;
+    gap:0.7rem;
+  }
+  
 }

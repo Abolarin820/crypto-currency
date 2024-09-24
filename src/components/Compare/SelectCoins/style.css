@@ -1,0 +1,18 @@
+.coins-flex{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:1.5rem;
+    margin: 0rem 1.5rem;
+}
+@media only screen and (max-width:800px) {
+    .coins-flex{
+        gap:1rem;
+    }
+    .coins-flex .btn-select{
+        height:2rem;
+    }
+    .coins-flex p{
+        font-size: 15px;
+    }
+}
