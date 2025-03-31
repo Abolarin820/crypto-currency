@@ -94,7 +94,7 @@ function ComparePage() {
         setCrypto1(event.target.value);
         const data = await getCoinData(event.target.value);
         CoinObject(setCrypto1Data, data);
-        settingChartData(setChartData, prices1, prices2);
+        settingChartData(setChartData);
           
       }
       setIsLoading(false);
